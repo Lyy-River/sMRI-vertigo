@@ -1,0 +1,66 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / OS
+.idea/
+.vscode/
+.cursor/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Debug / local logs
+debug-*.log
+*.log
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data: keep only README under data/
+data/**
+!data/README.md
+
+# Common data extensions (safety net)
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.npy
+*.npz
+*.mat
+*.nii
+*.nii.gz
+*.zip
+*.tar
+*.tar.gz
+
+# Results and local outputs
+results/
+outputs/
+output/
+*.png
+!docs/**/*.png
+
+# Environment secrets
+.env
+.env.*
+!.env.example

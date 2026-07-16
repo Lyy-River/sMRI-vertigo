@@ -1,0 +1,16 @@
+general:
+  experiment_name: example_msn_run
+  data_root: data
+  output_root: results
+  seed: 42
+
+msn:
+  metric: pearson
+  target_density: 0.1
+
+clustering:
+  method: kmeans
+  n_clusters: 3
+
+stats:
+  method: nbs

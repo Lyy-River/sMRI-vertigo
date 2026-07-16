@@ -1,0 +1,25 @@
+name: smri-pipeline
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python>=3.10
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - networkx
+  - pyyaml
+  - statsmodels
+  - matplotlib
+  - seaborn
+  - pytest
+  - pip
+  - pip:
+      # Install the local package in editable mode after creating the env:
+      #   pip install -e ".[msn,dev]"
+      # PyTorch / torch-geometric versions depend on your CUDA/CPU setup;
+      # see https://pytorch.org and https://pytorch-geometric.readthedocs.io
+      - torch
+      - torch-geometric

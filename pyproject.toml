@@ -1,0 +1,65 @@
+[project]
+name = "smri-pipeline"
+version = "0.1.0"
+description = "Publication code for morphometric similarity network (MSN) analysis and clinical statistical pipelines."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "sMRI Pipeline Contributors", email = "REPLACE_WITH_AUTHOR_EMAIL@example.com" },
+]
+keywords = [
+  "MRI",
+  "morphometric-similarity-network",
+  "neuroimaging",
+  "clinical-statistics",
+  "reproducibility",
+]
+dependencies = [
+  "numpy",
+  "pandas",
+  "scipy",
+  "scikit-learn",
+  "networkx",
+  "pyyaml",
+  "statsmodels",
+  "matplotlib",
+  "seaborn",
+]
+
+[project.optional-dependencies]
+msn = [
+  "torch",
+  "torch-geometric",
+]
+clinical = []
+dev = [
+  "pytest",
+  "nbformat",
+]
+all = [
+  "smri-pipeline[msn,clinical,dev]",
+]
+
+[project.scripts]
+msn-pipeline = "msn_pipeline.pipeline:cli_main"
+clinical-pipeline = "clinical_analysis.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/REPLACE_ORG/sMRI_pipeline"
+Repository = "https://github.com/REPLACE_ORG/sMRI_pipeline"
+Documentation = "https://github.com/REPLACE_ORG/sMRI_pipeline#readme"
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
